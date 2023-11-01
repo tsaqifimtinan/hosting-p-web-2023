@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <link rel="stylesheet" href="calculator.css">
+</head>
+<body>
+    <div id="app">
+        <div class="input-container">
+            <input type="text" v-model="result" readonly>
+        </div>
+        <div class="calculator-container">
+            <table>
+                <tr>
+                    <td><button v-on:click="clear">C</button></td>
+                    <td><button v-on:click="backspace">&larr;</button></td>
+                    <td><button v-on:click="append('(')">(</button></td>
+                    <td><button v-on:click="append(')')">)</button></td>
+                </tr>
+                <tr>
+                    <td><button v-on:click="append('7')">7</button></td>
+                    <td><button v-on:click="append('8')">8</button></td>
+                    <td><button v-on:click="append('9')">9</button></td>
+                    <td><button v-on:click="append('/')">/</button></td>
+                </tr>
+                <tr>
+                    <td><button v-on:click="append('4')">4</button></td>
+                    <td><button v-on:click="append('5')">5</button></td>
+                    <td><button v-on:click="append('6')">6</button></td>
+                    <td><button v-on:click="append('*')">*</button></td>
+                </tr>
+                <tr>
+                    <td><button v-on:click="append('1')">1</button></td>
+                    <td><button v-on:click="append('2')">2</button></td>
+                    <td><button v-on:click="append('3')">3</button></td>
+                    <td><button v-on:click="append('-')">-</button></td>
+                </tr>
+                <tr>
+                    <td><button v-on:click="append('0')">0</button></td>
+                    <td><button v-on:click="append('.')">.</button></td>
+                    <td><button v-on:click="calculate">=</button></td>
+                    <td><button v-on:click="append('+')">+</button></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="calculator.js"></script>
+</body>
+</html>
